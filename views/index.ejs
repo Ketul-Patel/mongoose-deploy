@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>Add a User!</h3>
+	
+	<form action='/users' method='post'>
+		Name: <input type='text' name='name'>
+		Age: <input type='text' name='age'>
+		<input type='submit' value='Submit'>
+	</form>
+
+
+	<% for(index in users) { %>
+	<hr>
+		<p><%= users[index].name %></p>
+		<p><%= users[index].age %></p>
+	<% } %>
+</body>
+</html>
